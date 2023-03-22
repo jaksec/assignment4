@@ -111,8 +111,9 @@ int parseData(char *inputFileName, int **ppData)
 	    fscanf(inFile,"%d\n",&dataSz);
 	    *ppData = (int *)malloc(sizeof(int) * dataSz);
 		
-	    for (int i = 0; i < dataSz; i++)
+	    for (int i = 0; i < dataSz; i++) {
             	fscanf(inFile, "%d\n", (*ppData + i));
+	    }
 	}
 	
 	return dataSz;
