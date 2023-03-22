@@ -9,7 +9,7 @@ int extraMemoryAllocated;
 // extraMemoryAllocated counts bytes of extra memory allocated
 void mergeSort(int pData[], int l, int r)
 {
-	if (l >= r)
+    if (l >= r)
         return;
 
     int mid = (l + r) / 2;
@@ -47,7 +47,7 @@ void mergeSort(int pData[], int l, int r)
 // extraMemoryAllocated counts bytes of memory allocated
 void insertionSort(int* pData, int n)
 {
-	int x, y, temp;
+    int x, y, temp;
     for (x = 1; x < n; x++)
     {
         temp = pData[x];
@@ -65,7 +65,7 @@ void insertionSort(int* pData, int n)
 // extraMemoryAllocated counts bytes of extra memory allocated
 void bubbleSort(int* pData, int n)
 {
-	int x, y, temp;
+    int x, y, temp;
     for (x = 0; x < n - 1; x++)
     {
         for (y = 0; y < n - x - 1; y++)
@@ -84,7 +84,7 @@ void bubbleSort(int* pData, int n)
 // extraMemoryAllocated counts bytes of extra memory allocated
 void selectionSort(int* pData, int n)
 {
-	int x, y, min, temp;
+    int x, y, min, temp;
     for (x = 0; x < n - 1; x++)
     {
         min = x;
@@ -108,11 +108,11 @@ int parseData(char *inputFileName, int **ppData)
 	
 	if (inFile)
 	{
-		fscanf(inFile,"%d\n",&dataSz);
-		*ppData = (int *)malloc(sizeof(int) * dataSz);
+	    fscanf(inFile,"%d\n",&dataSz);
+	    *ppData = (int *)malloc(sizeof(int) * dataSz);
 		
-		for (int i = 0; i < dataSz; i++)
-            fscanf(inFile, "%d\n", (*ppData + i));
+	    for (int i = 0; i < dataSz; i++)
+            	fscanf(inFile, "%d\n", (*ppData + i));
 	}
 	
 	return dataSz;
